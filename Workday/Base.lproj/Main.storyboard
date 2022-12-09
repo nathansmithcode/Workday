@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a3Q-lh-hcE">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="Workday" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landingViewBg 2" translatesAutoresizingMaskIntoConstraints="NO" id="4ak-oC-zwa">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NasaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="lZB-up-2hZ">
+                                <rect key="frame" x="42" y="160.66666666666666" width="306" height="119.99999999999997"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="pSH-u7-pxK"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar alpha="0.0" contentMode="redraw" placeholder="Type here to search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYJ-NR-uhg">
+                                <rect key="frame" x="32" y="322.66666666666669" width="326" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wIB-gJ-JgC"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eox-CO-87p">
+                                <rect key="frame" x="145" y="402.66666666666669" width="100" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0gL-sV-Ebg"/>
+                                    <constraint firstAttribute="height" constant="48" id="UQc-Q9-2uF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QmE-yl-v3k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lZB-up-2hZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="0pO-B7-d9A"/>
+                            <constraint firstItem="rYJ-NR-uhg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5lR-gm-Kur"/>
+                            <constraint firstItem="4ak-oC-zwa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="88x-eY-tkg"/>
+                            <constraint firstItem="Eox-CO-87p" firstAttribute="top" secondItem="rYJ-NR-uhg" secondAttribute="bottom" constant="24" id="AH5-6v-jeO"/>
+                            <constraint firstItem="rYJ-NR-uhg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="BdQ-lM-KK2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rYJ-NR-uhg" secondAttribute="trailing" constant="32" id="G1f-hi-xzE"/>
+                            <constraint firstItem="rYJ-NR-uhg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="I7c-Gv-CIa"/>
+                            <constraint firstAttribute="bottom" secondItem="4ak-oC-zwa" secondAttribute="bottom" id="MtU-FU-lV4"/>
+                            <constraint firstItem="4ak-oC-zwa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P5P-4A-nre"/>
+                            <constraint firstItem="4ak-oC-zwa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UBZ-7u-7fI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lZB-up-2hZ" secondAttribute="trailing" constant="42" id="cE9-RX-hd3"/>
+                            <constraint firstItem="rYJ-NR-uhg" firstAttribute="top" secondItem="lZB-up-2hZ" secondAttribute="bottom" constant="42" id="d8R-1j-VYz"/>
+                            <constraint firstItem="Eox-CO-87p" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qTt-XU-6ia"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="193-ir-tBg"/>
+                    <connections>
+                        <outlet property="nasaLogo" destination="lZB-up-2hZ" id="rrF-vE-3W6"/>
+                        <outlet property="searchBar" destination="rYJ-NR-uhg" id="OTR-lt-hus"/>
+                        <outlet property="searchButton" destination="Eox-CO-87p" id="6jM-ks-wJt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.1538461538462" y="3.5545023696682461"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O9Q-Y8-M4B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a3Q-lh-hcE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zez-Zl-kZN">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Vih-2h-lTa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcD-6d-7vT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.92307692307691" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NasaLogo" width="462.5" height="136"/>
+        <image name="landingViewBg 2" width="533" height="799.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
