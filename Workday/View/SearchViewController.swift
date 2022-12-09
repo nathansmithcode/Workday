@@ -13,7 +13,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     var imageData = [NasaData.Item]()
 
     @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
     
